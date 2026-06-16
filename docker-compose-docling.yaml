@@ -31,7 +31,7 @@ services:
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:cuda
-    container_name: open-webui-docling-compose
+    container_name: open-webui_docling
     working_dir: /app/backend
     ports:
       - "3000:8080"
