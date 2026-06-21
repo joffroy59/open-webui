@@ -34,7 +34,7 @@ services:
     container_name: open-webui_docling
     working_dir: /app/backend
     ports:
-      - "3000:8080"
+      - ${OPEN_WEBUI_PORT-3001}:8080
     environment:
       - 'OLLAMA_BASE_URL=http://192.168.0.53:11434'
       - 'WEBUI_SECRET_KEY='
