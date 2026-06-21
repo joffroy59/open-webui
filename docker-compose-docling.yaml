@@ -46,6 +46,12 @@ services:
     extra_hosts:
       - host.docker.internal:host-gateway
     restart: unless-stopped
-
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1 # alternatively, use `count: all` for all GPUs
+              capabilities: [gpu]
 volumes:
   open-webui: {}
